@@ -4,3 +4,8 @@ before_script:
     - apt-get update
     - apt-get upgrade -y
     - apt-get install r-base -y
+    
+build:
+    stage: build
+    script:
+        - find . -type f -name "*.r" -exec Rscript {} \;
