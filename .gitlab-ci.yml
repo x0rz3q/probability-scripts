@@ -13,4 +13,5 @@ before_script:
 build:
     stage: build
     script:
+        - cd "R"
         - find . -type f -name "*.r" -exec Rscript {} \;
