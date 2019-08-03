@@ -1,9 +1,5 @@
-image: r-base:latest
+image: x0rz3q/probability:latest
 
-before_script:
-    - Rscript -e 'install.packages("car")'
-    - Rscript -e 'install.packages("pwr")'
-    - Rscript -e 'install.packages("BSDA")'
 build:
     stage: build
     script:
