@@ -1,12 +1,6 @@
-image: ubuntu:rolling
+image: r-base:latest
 
 before_script:
-    - apt-get update
-    - apt-get upgrade -y
-    - apt-get install -y tzdata
-    - ln -fs /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
-    - dpkg-reconfigure --frontend noninteractive tzdata
-    - apt-get install r-base -y
     - Rscript -e 'install.packages("car")'
     - Rscript -e 'install.packages("pwr")'
     - Rscript -e 'install.packages("BSDA")'
